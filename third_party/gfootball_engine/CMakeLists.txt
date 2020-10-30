@@ -49,7 +49,9 @@ find_package(PythonLibs 3.7 EXACT REQUIRED)
 message("Using Python: ${PYTHONLIBS_VERSION_STRING}")
 string(REPLACE "." ";" VERSION_LIST ${PYTHONLIBS_VERSION_STRING})
 list(GET VERSION_LIST 0 PYTHON_MAJOR)
-list(GET VERSION_LIST 1 PYTHON_MINOR)
+list(GET VERSION_LIST 1 )
+
+set(PYTHON_MINOR 6)
 
 # Include the python boost.
 # Unfortunately different linux distributions are using different naming.
