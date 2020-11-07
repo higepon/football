@@ -85,11 +85,6 @@ Team *Player::GetTeam() {
   return team;
 }
 
-float Player::GetFatigueFactorInv() const {
-      printf("GetFatigueFactorInv called %d %f\n", GetTeamID(), team->GetAiDifficulty());
-      return GetTeamID() == 1 ? 1.0 : fatigueFactorInv;
-}
-
 void Player::Activate(boost::intrusive_ptr<Node> humanoidSourceNode,
                       boost::intrusive_ptr<Node> fullbodySourceNode,
                       std::map<Vector3, Vector3> &colorCoords,
