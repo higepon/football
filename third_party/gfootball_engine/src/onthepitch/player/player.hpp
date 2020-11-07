@@ -122,10 +122,7 @@ class Player : public PlayerBase {
     virtual void ResetSituation(const Vector3 &focusPos);
 
     void ProcessState(EnvState* state);
-    float GetFatigueFactorInv() const {
-      printf("GetFatigueFactorInv called %d %f\n", GetTeamID(), GetTeam()->GetAiDifficulty());
-      return GetTeamID() == 1 ? 1.0 : fatigueFactorInv;
-    }
+    float GetFatigueFactorInv() const;
   protected:
     void _CalculateTacticalSituation();
 
