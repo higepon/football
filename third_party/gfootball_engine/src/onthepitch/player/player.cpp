@@ -86,7 +86,7 @@ Team *Player::GetTeam() {
 }
 
 float Player::GetFatigueFactorInv() const {
-      printf("GetFatigueFactorInv called %d %f\n", GetTeamID(), GetTeam()->GetAiDifficulty());
+      printf("GetFatigueFactorInv called %d %f\n", GetTeamID(), team->GetAiDifficulty());
       return GetTeamID() == 1 ? 1.0 : fatigueFactorInv;
 }
 
