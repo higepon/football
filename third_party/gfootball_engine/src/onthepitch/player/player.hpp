@@ -123,7 +123,7 @@ class Player : public PlayerBase {
 
     void ProcessState(EnvState* state);
     float GetFatigueFactorInv() const {
-      printf("GetFatigueFactorInv called %d", GetTeamID());
+      printf("GetFatigueFactorInv called %d %f\n", GetTeamID(), GetTeam()->GetAiDifficulty());
       return GetTeamID() == 1 ? 1.0 : fatigueFactorInv;
     }
   protected:
