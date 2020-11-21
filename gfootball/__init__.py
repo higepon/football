@@ -17,6 +17,7 @@
 from gfootball.env import scenario_builder
 
 import gym
+import sys
 from gym.envs.registration import register
 
 
@@ -54,5 +55,14 @@ for env_name in scenario_builder.all_scenarios():
       kwargs={
           'env_name': env_name,
           'representation': 'simple115v2'
+      },
+  )
+  print("***** registering raw", file=sys.stderr)
+  register(
+      id='GFootball-{env_name}-raw-v0'.format(env_name=env_name),
+      entry_point='gfootball.env:create_environment',
+      kwargs={
+          'env_name': env_name,
+          'representation': 'raw'
       },
   )
